@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header with Flexbox */
+  .header {
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between; /* space between logo and nav */
+    align-items: center;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Main layout with Grid */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* content bigger, sidebar smaller */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .content, .sidebar {
+    background: #f2f2f2;
+    padding: 15px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Cards with Flexbox */
+  .cards {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .card {
+    flex: 1;
+    background: #e0f7fa;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #00796b;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-grid {
+      grid-template-columns: 1fr; /* stack content and sidebar */
+    }
+  
+    .cards {
+      flex-direction: column; /* stack cards */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      flex-direction: column; /* logo and nav stack */
+      align-items: flex-start;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+  
